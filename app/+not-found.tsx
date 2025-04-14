@@ -5,7 +5,7 @@ export default function NotFoundScreen() {
   return (
     <>
       <Stack.Screen options={{ title: "Oops!" }} />
-      <Text>opps!</Text>
+      <Text>opps! amro kamal</Text>
     </>
   );
 }

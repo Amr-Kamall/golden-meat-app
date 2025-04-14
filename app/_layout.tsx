@@ -1,11 +1,10 @@
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { useFonts } from "expo-font";
-import { Stack, useSegments } from "expo-router";
+import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { Button, Text, TouchableOpacity } from "react-native";
 import "react-native-reanimated";
+import { Platform, SafeAreaView } from "react-native";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -25,17 +24,14 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-  const path = useSegments();
-  console.log(path[0]);
 
   return (
-    <>
-      <Stack>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Stack initialRouteName="index">
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
-    </>
+      <StatusBar style="dark" />
+    </SafeAreaView>
   );
 }

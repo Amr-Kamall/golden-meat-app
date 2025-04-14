@@ -11,6 +11,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: Colors.gold00,
         tabBarInactiveTintColor: Colors.black10,
         tabBarLabelStyle: {
@@ -22,8 +23,8 @@ export default function TabLayout() {
           height: 75,
           borderTopColor: Colors.White30,
           borderTopWidth: 1,
+          direction: "rtl",
         },
-        headerTitleAlign: "left",
         headerLeft: () => (
           <Ionicons
             name="arrow-undo"
@@ -36,29 +37,11 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="profile"
+        name="index"
         options={{
-          title: "حسابي",
+          title: "الرئيسية",
           tabBarIcon: ({ color, size }) => (
-            <Octicons name="person" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="orders"
-        options={{
-          title: "طلباتي",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="bag-outline" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="basket"
-        options={{
-          title: "السلة",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome6 name="basket-shopping" size={24} color={color} />
+            <Feather name="home" size={size} color={color} />
           ),
         }}
       />
@@ -72,11 +55,29 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="basket"
         options={{
-          title: "الرئيسية",
+          title: "السلة",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="home" size={size} color={color} />
+            <FontAwesome6 name="basket-shopping" size={24} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="orders"
+        options={{
+          title: "طلباتي",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="bag-outline" size={24} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "حسابي",
+          tabBarIcon: ({ color, size }) => (
+            <Octicons name="person" size={24} color={color} />
           ),
         }}
       />

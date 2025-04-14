@@ -42,6 +42,10 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "isRTL": true,
+      "language": "ar" 
     }
   }
 }
