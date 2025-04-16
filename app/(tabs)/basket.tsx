@@ -3,7 +3,7 @@ import { StyleSheet, Image, Platform, View, Text } from "react-native";
 
 export default function Basket() {
   return (
-    <View style={{ direction: "rtl" }}>
+    <View>
       <Header title="السلة" />
       <Text>basket</Text>
     </View>

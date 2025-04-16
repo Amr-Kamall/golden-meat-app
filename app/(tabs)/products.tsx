@@ -3,7 +3,7 @@ import { StyleSheet, Image, Platform, View, Text } from "react-native";
 
 export default function Products() {
   return (
-    <View style={{ direction: "rtl" }}>
+    <View>
       <Header title="منتجاتنا" />
       <Text>basket</Text>
     </View>
